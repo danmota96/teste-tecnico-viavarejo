@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
-export const StyledOrderContainer = styled.div`
+export const StyledOrderContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  h3 { 
+
+  label { 
     font-weight: 400;
+    font-size: 20px;
+    margin: .8rem 0 .5rem 0;
   }
 `;
-
 
 export const StyledInput = styled.input`
   width: 30rem;

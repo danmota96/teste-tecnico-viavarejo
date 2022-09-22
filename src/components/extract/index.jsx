@@ -1,4 +1,5 @@
 import React from "react";
+import Order from "../order";
 import {StyledProductDetails, StyledHeader, StyledContainer, StyledProduct, StyledBar } from "./style";
 
 const Extract = () => {
@@ -12,11 +13,12 @@ const Extract = () => {
       <StyledBar />
 
       <StyledProduct>
+        {Order.map}
         <StyledProductDetails>
-          <h2>+</h2>
-          <h2>Lorem ipsum </h2>
+          <h2>{localStorage.getItem("transaction")}</h2>
+          <h2>{localStorage.getItem("product")}</h2>
         </StyledProductDetails>
-        <h2>R$99,99</h2>
+        <h2>{localStorage.getItem("price")}</h2>
       </StyledProduct>
 
       <StyledBar />
