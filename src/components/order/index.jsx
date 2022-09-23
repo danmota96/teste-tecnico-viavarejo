@@ -1,16 +1,29 @@
 import { React, useEffect, useState } from "react";
+import { StyledBar } from "../constants/globalStyle"
 import {
-  StyledBar,
   Styledbutton,
   StyledInput,
   StyledOrderContainer,
   StyledSelect,
 } from "./style";
 
+
+const getLocalItems = () => {
+  let order = localStorage.getItem('orders');
+  console.log(order);
+
+  if (order) {
+      return JSON.parse(localStorage.getItem('orders'));
+  } else {
+      return [];
+  }
+}
+
 const Order = () => {
   const [transaction, setTransaction] = useState();
   const [product, setProduct] = useState();
   const [price, setPrice] = useState();
+  const [items, setItems] = useState(getLocalItems());
 
   const handleOrder = () => {
     var orders = JSON.parse(localStorage.getItem("orders") || []);
@@ -22,6 +35,10 @@ const Order = () => {
     orders.push(order);
     localStorage.setItem("orders", JSON.stringify(orders));
   };
+
+  useEffect(() => {
+    localStorage.setItem('orders', JSON.stringify(items))
+ }, [items]);
 
   return (
     <StyledOrderContainer onSubmit={handleOrder}>

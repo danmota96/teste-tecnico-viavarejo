@@ -1,37 +1,40 @@
-import React from "react";
-import {StyledProductDetails, StyledHeader, StyledContainer, StyledProduct, StyledBar } from "./style";
+import React from 'react'
+import { StyledBar } from "../constants/globalStyle"
+import {
+  StyledHeader,
+  StyledContainer,
+  StyledProduct,
+  StyledTotal,
+} from "./style";
 
 const Extract = () => {
   return (
     <StyledContainer>
-      <h1>Extrato de Transações</h1>
+      <h1>Extrato de transações</h1>
       <StyledHeader>
-        <h2>Mercadoria</h2>
-        <h2>Valor</h2>
-      </StyledHeader>
-      <StyledBar />
-
-      <StyledProduct>
-        <StyledProductDetails>
-          <h2>+</h2>
-          <h2>Lorem ipsum </h2>
-        </StyledProductDetails>
-        <h2>R$99,99</h2>
-      </StyledProduct>
-
-      <StyledBar />
-
-      <StyledBar />
-
+      <h2>Mercadoria</h2>
+      <h2>Valor</h2>
+     </StyledHeader>
+     <StyledBar />
+     <StyledProduct>
       <div>
-        <h1>Total</h1>
-        <section>
-          <h1>R$99,99</h1>
-          <h2>[LUCRO]</h2>
-        </section>
+      <h1>+</h1>
+      <h2>Product name</h2>
       </div>
-    </StyledContainer>
-  );
-};
+      <h2>R$ 9999,99</h2>
+     </StyledProduct>
+     <StyledBar />
+     <StyledBar />
+     <StyledTotal>
+      <h2>Total</h2>
+      <div>
+      <h2>R$ 9999,99</h2>
+      <h3>[LUCRO]</h3>
+      </div>
+     
+     </StyledTotal>
+     </StyledContainer>
+  )
+}
 
-export default Extract;
+export default Extract

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   background-color: #E0E0E0;
   display: flex;
@@ -10,5 +10,15 @@ export const StyledHeader = styled.header`
   align-items: center;
   box-sizing: border-box;
   font-size: 3rem;
+
+  @media (max-width: 1900px) {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+    width: 100%;
+  }
 `;
 

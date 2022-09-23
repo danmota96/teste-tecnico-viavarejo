@@ -5,7 +5,6 @@ export const StyledOrderContainer = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-
   label { 
     font-weight: 400;
     font-size: 20px;
@@ -16,11 +15,25 @@ export const StyledOrderContainer = styled.form`
 export const StyledInput = styled.input`
   width: 30rem;
   height: 1.5rem;
+  @media (max-width: 1900px) {
+    width: 89%;
+  }
+  
+  @media (min-width: 1024px) {
+    width: 89%;
+  }
 `;
 
 export const StyledSelect = styled.select`
   width: 30rem;
   height: 1.5rem;
+  @media (max-width: 1900px) {
+    width: 89%;
+  }
+  
+  @media (min-width: 1024px) {
+    width: 89%;
+  }
 `;
 
 export const Styledbutton = styled.button`
@@ -31,11 +44,13 @@ export const Styledbutton = styled.button`
   width: 30rem;
   height: 2em;
   cursor: pointer;
+
+  @media (max-width: 1900px) {
+    width: 89%;
+  }
+  
+  @media (min-width: 1024px) {
+    width: 89%;
+  }
 `;
 
-export const StyledBar = styled.div`
-  margin-top: 1rem;
-  width: 50%;
-  height: 0.1rem;
-  background-color: black;
-`;
